@@ -2,7 +2,7 @@
 	"name": "Serveless Interactive Query",
 	"properties": {
 		"content": {
-			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK     'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/bing_covid-19_data/latest/bing_covid-19_data.parquet',\n        FORMAT = 'parquet'\n    ) AS [result];\n\nSELECT\n    SUM(deaths) as TotalDeaths, MONTH(updated) as Months\nFROM\n    OPENROWSET(\n        BULK     'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/bing_covid-19_data/latest/bing_covid-19_data.parquet',\n        FORMAT = 'parquet'\n    ) AS [result]\ngroup By MONTH(updated)   \nOrder by MONTH(updated) ASC \n\nfjskhfadsjghfghdghdagfgfdsghja",
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK     'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/bing_covid-19_data/latest/bing_covid-19_data.parquet',\n        FORMAT = 'parquet'\n    ) AS [result];\n\nSELECT\n    SUM(deaths) as TotalDeaths, MONTH(updated) as Months\nFROM\n    OPENROWSET(\n        BULK     'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/bing_covid-19_data/latest/bing_covid-19_data.parquet',\n        FORMAT = 'parquet'\n    ) AS [result]\ngroup By MONTH(updated)   \nOrder by MONTH(updated) ASC \n",
 			"metadata": {
 				"language": "sql"
 			},
