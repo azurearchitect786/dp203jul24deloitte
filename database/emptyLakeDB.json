@@ -1,0 +1,25 @@
+{
+	"name": "emptyLakeDB",
+	"properties": {
+		"Name": "emptyLakeDB",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://files@datalake4mf9yaj.dfs.core.windows.net/emptyLakeDB",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "synapse4mf9yaj-WorkspaceDefaultStorage"
+			}
+		},
+		"PublishStatus": "PUBLISHED",
+		"ObjectVersion": 1,
+		"ObjectId": "561fc5ab-56b2-4804-af5e-76a4ed67096f"
+	},
+	"type": "DATABASE"
+}
